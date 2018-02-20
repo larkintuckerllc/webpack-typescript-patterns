@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export interface AppProps {
+interface AppProps {
     message: string,
 };
 export default function(props: AppProps ) {
