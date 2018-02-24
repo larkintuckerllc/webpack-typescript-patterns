@@ -9,7 +9,7 @@ export default function({ message }: AppProps ) {
     return (
         <div>
             <h1>Hello {message}</h1>
-            <Button>Test</Button>
-        </div>
+            <Button type="primary">Test</Button
+         </div>
     );
 };
