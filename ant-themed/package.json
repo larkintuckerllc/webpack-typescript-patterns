@@ -9,9 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "awesome-typescript-loader": "^3.4.1",
     "css-loader": "^0.28.10",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
     "style-loader": "^0.20.2",
+    "ts-import-plugin": "^1.4.4",
+    "ts-loader": "^3.5.0",
     "typescript": "^2.7.2",
     "webpack": "^3.11.0"
   },

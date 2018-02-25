@@ -1,6 +1,5 @@
 import React from 'react';
-import Button from 'antd/lib/button';
-import 'antd/lib/button/style/css';
+import { Button } from 'antd';
 
 interface AppProps {
     message: string,

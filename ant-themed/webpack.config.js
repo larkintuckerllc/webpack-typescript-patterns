@@ -1,4 +1,5 @@
 const path = require('path');
+const tsImportPlugin = require('ts-import-plugin')
 
 module.exports = {
     entry: './src/index.tsx',
@@ -14,16 +15,38 @@ module.exports = {
         rules: [
             {
                 test: /\.(ts|tsx)$/,
-                loader: 'awesome-typescript-loader',
+                loader: 'ts-loader',
+                options: {
+                    getCustomTransformers: () => ({
+                        before: [ tsImportPlugin({
+                          libraryName: 'antd',
+                          libraryDirectory: 'es',
+                          style: true,
+                        }) ]
+                     })
+                }
             },
             {
-                test: /\.css$/,
+                test: /\.less$/,
                 use: [
                     {
                         loader: 'style-loader',
                     },
                     {
                         loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                            sourceMap: true,
+                        },
+                    },
+                    {
+                        loader: 'less-loader',
+                        options: {
+                            sourceMap: true,
+                            modifyVars: {
+                                '@primary-color': '#1DA57A',
+                            },
+                        }
                     },
                 ],
             },
