@@ -7,3 +7,4 @@ it('renders without crashing', () => {
   render(<App message="Hello" />, div);
   unmountComponentAtNode(div);
 });
+
