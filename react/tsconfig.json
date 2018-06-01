@@ -3,6 +3,6 @@
         "jsx": "react",
         "noImplicitAny": true,
         "sourceMap": true,
-        "target": "es5"
+        "target": "ES5"
     }
 }
